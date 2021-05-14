@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This section is going to be used to apply the information required to each employee. this is so
+   when an employee is applied into the database, they are able to be identified as such.
+
  */
 package studenthallapplication;
 
@@ -9,7 +9,7 @@ package studenthallapplication;
  *
  * @author Student
  */
-public class Student extends Person{
+public class Employee extends Person{
 
     /**
      *
@@ -21,42 +21,8 @@ public class Student extends Person{
      * @param middleName
      * @param lastName
      */
-    public Student(String course, String level, String campus, String employment, String firstName, String middleName, String lastName) {
-        super(campus, firstName, middleName, lastName);
-        this.course = course;
-        this.level = level;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public String getCourse() {
-        return course;
-    }
-
-    /**
-     *
-     * @param course
-     */
-    public void setCourse(String course) {
-        this.course = course;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public String getLevel() {
-        return level;
-    }
-
-    /**
-     *
-     * @param level
-     */
-    public void setLevel(String level) {
-        this.level = level;
+    public Employee(String course, String level, String campus, String employment, String firstName, String middleName, String lastName) {
+        super(course, level, campus, employment, firstName, middleName, lastName);
     }
 
     /**
@@ -65,7 +31,7 @@ public class Student extends Person{
      */
     public String getCampus() {
         return campus;
-    }
+    } //this will return the campus
 
     /**
      *
@@ -79,9 +45,25 @@ public class Student extends Person{
      *
      * @return
      */
+    public String getEmployment() {
+        return employment;
+    }//this will return the employment of each person
+
+    /**
+     *
+     * @param employment
+     */
+    public void setEmployment(String employment) {
+        this.employment = employment;
+    }
+
+    /**
+     *
+     * @return
+     */
     public String getFirstName() {
         return firstName;
-    }
+    }//this will return the first name of the person inserted
 
     /**
      *
@@ -97,7 +79,7 @@ public class Student extends Person{
      */
     public String getMiddleName() {
         return middleName;
-    }
+    }//this will return the middle name of the inserted person
 
     /**
      *
@@ -113,7 +95,7 @@ public class Student extends Person{
      */
     public String getLastName() {
         return lastName;
-    }
+    }//this will return the last name of the person
 
     /**
      *
@@ -129,7 +111,7 @@ public class Student extends Person{
      */
     public String getDietaryrequirements() {
         return dietaryrequirements;
-    }
+    }//this will return the dietary requirements inserted for each person
 
     /**
      *
@@ -145,7 +127,7 @@ public class Student extends Person{
      */
     public String getDateofregistration() {
         return dateofregistration;
-    }
+    }//this will return the date that the employee started their employment.
 
     /**
      *
@@ -153,6 +135,22 @@ public class Student extends Person{
      */
     public void setDateofregistration(String dateofregistration) {
         this.dateofregistration = dateofregistration;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public int getHoursworked() {
+        return hoursworked;
+    }//this will return how many hours the employee worked.
+
+    /**
+     *
+     * @param hoursworked
+     */
+    public void setHoursworked(int hoursworked) {
+        this.hoursworked = hoursworked;
     }
 
 }

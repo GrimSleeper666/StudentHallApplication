@@ -1,15 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package studenthallapplication;
+
+//this Class will return the values provided within the form and apply them to be stored as they are. 
 
 /**
  *
  * @author Student
  */
-public class Student extends Person{
+public class Person {
+
+    String course;
+    String level;
+    String campus;
+    String employment;
+    String firstName;
+    String middleName;
+    String lastName;
+    String dietaryrequirements;
+    String dateofregistration;
+    int hoursworked;
 
     /**
      *
@@ -21,26 +29,28 @@ public class Student extends Person{
      * @param middleName
      * @param lastName
      */
-    public Student(String course, String level, String campus, String employment, String firstName, String middleName, String lastName) {
-        super(campus, firstName, middleName, lastName);
+    public Person(String course, String level, String campus, String employment, String firstName, String middleName, String lastName) {
         this.course = course;
         this.level = level;
+        this.campus = campus;
+        this.employment = employment;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
     }
-
+    
     /**
      *
-     * @return
+     * @param campus
+     * @param firstName
+     * @param middleName
+     * @param lastName
      */
-    public String getCourse() {
-        return course;
-    }
-
-    /**
-     *
-     * @param course
-     */
-    public void setCourse(String course) {
-        this.course = course;
+    public Person(String campus, String firstName, String middleName, String lastName) {
+        this.campus = campus;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
     }
 
     /**
@@ -73,6 +83,22 @@ public class Student extends Person{
      */
     public void setCampus(String campus) {
         this.campus = campus;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getEmployment() {
+        return employment;
+    }
+
+    /**
+     *
+     * @param employment
+     */
+    public void setEmployment(String employment) {
+        this.employment = employment;
     }
 
     /**
@@ -121,38 +147,6 @@ public class Student extends Person{
      */
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public String getDietaryrequirements() {
-        return dietaryrequirements;
-    }
-
-    /**
-     *
-     * @param dietaryrequirements
-     */
-    public void setDietaryrequirements(String dietaryrequirements) {
-        this.dietaryrequirements = dietaryrequirements;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public String getDateofregistration() {
-        return dateofregistration;
-    }
-
-    /**
-     *
-     * @param dateofregistration
-     */
-    public void setDateofregistration(String dateofregistration) {
-        this.dateofregistration = dateofregistration;
     }
 
 }
